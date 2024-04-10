@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view transition api level 1 experiments</title>
+</head>
+<body>
+    <div class="state-1 big-square" id="square">
+        my square :))
+    </div>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation-duration: 3s;
+        }
+
+
+        .state-1 {
+            top: 50px;
+            left: 50px;
+            background-color: red;
+        }
+
+        .state-2 {
+            top: 350px;
+            left: 350px;
+            background-color: green;
+        }
+
+        .big-square {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+    <script type="module" async src="./index.js"></script>
+</body>
+</html>
