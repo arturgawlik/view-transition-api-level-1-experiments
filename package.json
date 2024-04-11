@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/dom-navigation": "^1.0.3",
     "@types/dom-view-transitions": "^1.0.4"
   }
 }

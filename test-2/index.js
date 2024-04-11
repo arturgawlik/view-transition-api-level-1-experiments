@@ -3,7 +3,7 @@ navigation.addEventListener("navigate", (e) => {
     handler: () => {
       try {
         function navigate() {
-          const url = new URL(window.location.href);
+          const url = new URL(window.location1.href);
           const root = document.getElementById("root");
 
           const tmpl = document.querySelector(
