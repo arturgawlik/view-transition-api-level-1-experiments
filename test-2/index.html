@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view transition api level 1 experiments</title>
+</head>
+<body>
+    <template id="-test-2-page-1">
+        <p>hello page 1</p>
+    </template>
+
+    <template id="-test-2-page-2">
+        <p>hello page 2</p>
+    </template>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="./page-1">go to page 1</a></li>
+            <li><a href="./page-2">go to page 2</a></li>
+        </ul>
+    </nav>
+    <div id="root"></div>
+
+    <script type="module" async src="./index.js"></script>
+</body>
+</html>

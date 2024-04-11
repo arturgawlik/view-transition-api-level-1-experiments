@@ -7,17 +7,20 @@
 </head>
 <body>
     <div class="state-1 big-square" id="square">
-        my square :))
     </div>
     <style>
         :root {
-            color-scheme: dark;
+            color-scheme: light dark;
         }
 
 
         ::view-transition-old(root),
         ::view-transition-new(root) {
             animation-duration: 3s;
+        }
+
+        ::view-transition {
+            background-color: red;
         }
 
 
