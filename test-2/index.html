@@ -8,6 +8,50 @@
         :root {
             color-scheme: dark;
         }
+
+        @keyframes grow-x {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes shrink-x {
+            from {
+                transform: scaleX(1);
+            }
+            to {
+                transform: scaleX(0);
+            }
+        }
+
+        ::view-transition-old(root), ::view-transition-new(root) {
+            animation-duration: 0.1s;
+        }
+
+        /* ::view-transition-old(my-sentance), ::view-transition-new(my-sentance) {
+            animation-duration: 1s;
+            height: auto;
+            right: 0;
+            left: auto;
+            transform-origin: right center;
+        }
+
+        ::view-transition-old(my-sentance) {
+            animation: 0.25s linear both shrink-x;
+        }
+
+        ::view-transition-new(my-sentance) {
+            animation: 0.25s 0.25s linear both grow-x;
+        } */
+        ::view-transition-old(my-sentance), ::view-transition-new(my-sentance) {
+            height: 100%;
+        }
+
+        p {
+            view-transition-name: my-sentance;
+        }
     </style>
 </head>
 <body>
@@ -21,6 +65,7 @@
         
         <div>
             <h1>hello from page 1</h1>
+            <p>i really love my girlfriend</p>
         </div>
     </template>
 
@@ -30,9 +75,15 @@
                 height: 100vh;
                 background-color: chocolate;
             }
+            p {
+                margin-top: 100px;
+                font-size: 48px;
+                font-weight: 700;
+            }
         </style>
         <div>
             <h1>hello from page 2</h1>
+            <p>i really love my girlfriend</p>
         </div>
     </template>
     <style>
